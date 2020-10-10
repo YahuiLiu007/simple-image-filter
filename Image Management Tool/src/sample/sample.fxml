@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="735.0" style="-fx-border-radius: 50%;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar opacity="0.78" prefHeight="29.0" prefWidth="735.0" style="-fx-background-color: #E6E5E6;">
+        <menus>
+          <Menu fx:id="MenuFile" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="MenuOpen" mnemonicParsing="false" onAction="#OpenFile" text="Open" />
+                  <MenuItem fx:id="MenuExport" mnemonicParsing="false" onAction="#ExportFile" text="Export" />
+            </items>
+          </Menu>
+            <Menu fx:id="MenuFilter" mnemonicParsing="false" text="Filter">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#grayscale" text="grayscale" />
+                  <MenuItem mnemonicParsing="false" onAction="#invert" text="invert" />
+                  <MenuItem mnemonicParsing="false" onAction="#chrome" text="chrome" />
+                  <MenuItem mnemonicParsing="false" onAction="#lines" text="lines" />
+                  <MenuItem mnemonicParsing="false" onAction="#crystallize" text="crystallize" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ProgressBar fx:id="ProgBar" layoutX="7.0" layoutY="651.0" prefHeight="20.0" prefWidth="722.0" progress="0.0" />
+      <AnchorPane layoutX="4.0" layoutY="33.0" prefHeight="473.0" prefWidth="537.0" style="-fx-border-color: black; -fx-border-radius: 5%;">
+         <children>
+            <ImageView fx:id="mainImageView" fitHeight="440.0" fitWidth="514.0" layoutX="12.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="548.0" layoutY="33.0" prefHeight="612.0" prefWidth="181.0" style="-fx-border-color: black; -fx-border-radius: 15%; -fx-background-color: white;">
+         <children>
+            <ScrollPane fx:id="ScrollP" layoutX="8.0" layoutY="14.0" prefHeight="584.0" prefWidth="165.0" style="-fx-background-color: white;">
+              <content>
+                <AnchorPane fx:id="AnchorP" minHeight="0.0" minWidth="0.0" prefHeight="582.0" prefWidth="163.0" style="-fx-background-color: white;" />
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" layoutY="521.0" prefHeight="122.0" prefWidth="544.0" style="-fx-border-color: black; -fx-border-radius: 20%;">
+         <children>
+            <TextArea fx:id="txtField" layoutX="24.0" layoutY="26.0" prefHeight="76.0" prefWidth="496.0" style="-fx-border-color: white; -fx-background-color: transparent,white,transparent,white; -fx-background-insets: 0;" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
